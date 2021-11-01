@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: #1a1b1c;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="324.0" layoutX="541.0" layoutY="102.0" opacity="0.1" rotate="-136.5" stroke="BLACK" strokeType="INSIDE" width="13.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="588.0" layoutY="215.0" opacity="0.1" rotate="-136.5" stroke="BLACK" strokeType="INSIDE" width="55.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="-2.0" layoutY="-59.0" opacity="0.1" rotate="-136.5" scaleZ="0.0" stroke="BLACK" strokeType="INSIDE" translateZ="50.0" width="55.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="240.0" layoutX="51.0" layoutY="-50.0" opacity="0.1" rotate="-136.5" stroke="BLACK" strokeType="INSIDE" width="33.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="324.0" layoutX="83.0" layoutY="-69.0" opacity="0.1" rotate="-136.5" stroke="BLACK" strokeType="INSIDE" width="13.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="240.0" layoutX="562.0" layoutY="156.0" opacity="0.1" rotate="-136.5" stroke="BLACK" strokeType="INSIDE" width="33.0" />
+      <Ellipse layoutX="650.0" opacity="0.15" radiusX="100.0" radiusY="80.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="0.41640377345521373" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007633587786259542">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <MotionBlur angle="135.0" radius="50.36">
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </MotionBlur>
+         </effect>
+      </Ellipse>
+      <Text fill="WHITE" layoutX="25.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature" textAlignment="CENTER" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.41796875">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="temperature" fill="WHITE" layoutX="47.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30.0 °C" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="tempbar" layoutX="26.0" layoutY="93.0" prefHeight="18.0" prefWidth="121.0" progress="0.51" style="-fx-accent: #db2d21; -fx-padding: -2;">
+         <effect>
+            <DropShadow height="22.47" offsetX="3.0" offsetY="3.0" radius="10.855" width="22.95">
+               <color>
+                  <Color red="0.28947368264198303" green="0.28232619166374207" blue="0.28232619166374207" />
+               </color>
+            </DropShadow>
+         </effect></ProgressBar>
+      <Text fill="WHITE" layoutX="175.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PV Input Amps" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="349.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PV Input Volts" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="521.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irradiance" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="pvinputamps" fill="WHITE" layoutX="188.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123.45 Amp" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="pvinputvolts" fill="WHITE" layoutX="376.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123.45 V" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="irradiance" fill="WHITE" layoutX="522.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 Lum" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#acacac" layoutX="528.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="value in (W/m²)" textAlignment="CENTER" />
+      <ProgressBar fx:id="pvampsbar" layoutX="184.0" layoutY="93.0" prefHeight="18.0" prefWidth="121.0" progress="0.51" style="-fx-accent: #F2F600; -fx-padding: -2;">
+         <effect>
+            <DropShadow height="22.47" offsetX="3.0" offsetY="3.0" radius="10.855" width="22.95">
+               <color>
+                  <Color red="0.28947368264198303" green="0.28232619166374207" blue="0.28232619166374207" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="pvvoltsbar" layoutX="356.0" layoutY="93.0" prefHeight="18.0" prefWidth="121.0" progress="0.51" style="-fx-accent: #F2F600; -fx-padding: -2;">
+         <effect>
+            <DropShadow height="22.47" offsetX="3.0" offsetY="3.0" radius="10.855" width="22.95">
+               <color>
+                  <Color red="0.28947368264198303" green="0.28232619166374207" blue="0.28232619166374207" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="lightbar" layoutX="508.0" layoutY="93.0" prefHeight="18.0" prefWidth="121.0" progress="0.51" style="-fx-accent: black; -fx-padding: -2;">
+         <effect>
+            <DropShadow height="22.47" offsetX="3.0" offsetY="3.0" radius="10.855" width="22.95">
+               <color>
+                  <Color red="0.28947368264198303" green="0.28232619166374207" blue="0.28232619166374207" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <Text fill="WHITE" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Battery Charging Current" textAlignment="CENTER" wrappingWidth="170.0">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="battvoltage" fill="WHITE" layoutX="171.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Battery Voltage" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="battchargecurrent" fill="WHITE" layoutX="28.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123.45 Amp" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="battvoltage" fill="WHITE" layoutX="204.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123.45 V" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="battcurrentbar" layoutX="24.0" layoutY="206.0" prefHeight="18.0" prefWidth="121.0" progress="0.51" style="-fx-accent: #00FF47; -fx-padding: -2;">
+         <effect>
+            <DropShadow height="22.47" offsetX="3.0" offsetY="3.0" radius="10.855" width="22.95">
+               <color>
+                  <Color red="0.28947368264198303" green="0.28232619166374207" blue="0.28232619166374207" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="battvoltagebar" layoutX="184.0" layoutY="206.0" prefHeight="18.0" prefWidth="121.0" progress="0.51" style="-fx-accent: #00FF47; -fx-padding: -2;">
+         <effect>
+            <DropShadow height="22.47" offsetX="3.0" offsetY="3.0" radius="10.855" width="22.95">
+               <color>
+                  <Color red="0.28947368264198303" green="0.28232619166374207" blue="0.28232619166374207" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <Button id="filebtncss" fx:id="filebtn" layoutX="21.0" layoutY="270.0" mnemonicParsing="false" onAction="#chooseFileBtnClick" prefHeight="25.0" prefWidth="129.0" text="Choose File" textFill="WHITE">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" spread="0.01">
+               <color>
+                  <Color red="0.062745101749897" green="0.2980392277240753" blue="0.07058823853731155" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+      </Button>
+      <Button id="settingsbtncss" fx:id="settingsbtn" layoutX="22.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.062745101749897" green="0.2980392277240753" blue="0.07058823853731155" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button id="appinfobtncss" fx:id="appinfobtn" layoutX="84.0" layoutY="310.0" mnemonicParsing="false" onAction="#appInfoBtnClick" prefHeight="25.0" prefWidth="66.0" text="App Info" textFill="WHITE">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" spread="0.01">
+               <color>
+                  <Color red="0.062745101749897" green="0.2980392277240753" blue="0.07058823853731155" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="43.0" layoutX="171.0" layoutY="292.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="101.0">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.1921568661928177" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="27.0" layoutX="181.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="79.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="43.0" layoutX="286.0" layoutY="292.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="101.0">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.1921568661928177" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="43.0" layoutX="397.0" layoutY="292.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="101.0">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.1921568661928177" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="43.0" layoutX="508.0" layoutY="292.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="101.0">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.1921568661928177" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="27.0" layoutX="297.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="79.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="27.0" layoutX="409.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="79.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="27.0" layoutX="520.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="79.0" />
+      <Text fill="WHITE" layoutX="196.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Chosen" textAlignment="CENTER">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="304.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Recorded" textAlignment="CENTER">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="422.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Stamp" textAlignment="CENTER">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="541.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board ID">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="filelabel" fill="WHITE" layoutX="176.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Choose File..." textAlignment="CENTER" wrappingWidth="90.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="datelabel" fill="WHITE" layoutX="303.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="29.09.2021" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="timestamplabel" fill="WHITE" layoutX="421.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10:48:26">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="boardidlabel" fill="WHITE" layoutX="555.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

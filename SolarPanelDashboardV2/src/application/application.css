@@ -1,0 +1,22 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+#filebtncss,#settingsbtncss,#appinfobtncss
+{
+	-fx-background-color: #3DAE48;
+}
+
+#filebtncss:hover,#settingsbtncss:hover,#appinfobtncss:hover
+{
+	-fx-background-color: #43bf4f;
+}
+
+#filebtncss:pressed,#settingsbtncss:pressed,#appinfobtncss:pressed
+{
+	-fx-background-color: #2D8035;
+}
+
+/*  #3DAE48 - base btn colour
+ * 	#43bf4f - hover btn colour
+ * 	#2D8035 - pressed btn colour
+ */

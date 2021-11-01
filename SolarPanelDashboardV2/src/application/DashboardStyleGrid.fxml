@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: #1a1b1c;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="17.0" opacity="0.1" rotate="134.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="502.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="17.0" opacity="0.1" rotate="137.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="502.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="379.0" opacity="0.1" rotate="-132.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="49.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="379.0" opacity="0.1" rotate="-136.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="49.0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fx:id="temperature" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="30.0 C" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="tempbar" prefHeight="20.0" prefWidth="125.0" progress="0.51" style="-fx-accent: #db2d21;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.29019609093666077" green="0.2823529541492462" blue="0.2823529541492462" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="pvampsbar" prefHeight="20.0" prefWidth="125.0" progress="0.69" style="-fx-accent: #F2F600;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.29019609093666077" green="0.2823529541492462" blue="0.2823529541492462" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PV Input Amps" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fx:id="pvinputamps" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="231.56 Amp" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Battery Voltage" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fx:id="battvoltage" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="15.2 V" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+           <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="battvoltagebar" prefHeight="20.0" prefWidth="125.0" progress="0.28" style="-fx-accent: #00FF47;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.29019609093666077" green="0.2823529541492462" blue="0.2823529541492462" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PV Input Volts" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fx:id="pvinputvolts" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="10.7 V" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="pvvoltsbar" prefHeight="20.0" prefWidth="125.0" progress="0.28" style="-fx-accent: #F2F600;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.29019609093666077" green="0.2823529541492462" blue="0.2823529541492462" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="lightbar" prefHeight="20.0" prefWidth="125.0" progress="0.83" style="-fx-accent: black;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.29019609093666077" green="0.2823529541492462" blue="0.2823529541492462" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <Text fx:id="irradiance" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="451 Lum" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Irradiance" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#b1b1b1" strokeType="OUTSIDE" strokeWidth="0.0" text="value in (W/m²)" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="30.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Battery Current" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fx:id="battchargecurrent" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="100.5 Amp" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Text>
+      <ProgressBar fx:id="battcurrentbar" prefHeight="20.0" prefWidth="125.0" progress="0.37" style="-fx-accent: #00FF47;" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.29019609093666077" green="0.2823529541492462" blue="0.2823529541492462" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ProgressBar>
+      <Text fill="#b1b1b1" strokeType="OUTSIDE" strokeWidth="0.0" text="(Charging)" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="30.0" />
+         </GridPane.margin>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="109.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.1921568661928177" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="91.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="109.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.1921568661928177" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="109.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.1921568661928177" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="109.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.1921568661928177" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="91.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="91.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434343" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="91.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="File Chosen" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Recorded" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Timestamp" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Board Id" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Text fx:id="timestamplabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Choose a file..." textAlignment="CENTER" wrappingWidth="100.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="25.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="filelabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Choose a file..." textAlignment="CENTER" wrappingWidth="100.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="25.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fx:id="datelabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Choose a file..." textAlignment="CENTER" wrappingWidth="100.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="25.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fx:id="boardidlabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Choose a file..." textAlignment="CENTER" wrappingWidth="100.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="25.0" />
+         </GridPane.margin>
+      </Text>
+      <Button id="filebtncss" mnemonicParsing="false" onAction="#chooseFileBtnClick" prefHeight="35.0" prefWidth="120.0" text="Choose File" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.062745101749897" green="0.2980392277240753" blue="0.07058823853731155" />
+               </color>
+            </DropShadow>
+         </effect></Button>
+      <Button id="appinfobtncss" mnemonicParsing="false" onAction="#appInfoBtnClick" prefHeight="30.0" prefWidth="120.0" text="App Info" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color red="0.062745101749897" green="0.2980392277240753" blue="0.07058823853731155" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+   </children>
+</GridPane>
