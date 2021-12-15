@@ -114,7 +114,7 @@ public class Controller {
 	
 	public void tempbarChange(double num)
 	{
-		temperature.setText(decformat.format(num) + " °C");
+		temperature.setText(decformat.format(num) + " ï¿½C");
 		//handles if the num is below or above my manually set range
 		if(num < mintemp)
 			tempbar.setProgress(0);
@@ -124,7 +124,7 @@ public class Controller {
 		{
 		double result = (num - mintemp) / (maxtemp-mintemp); 
 		//this beautiful formula right here takes care of converting the data 
-		//to between 0 and 1, fuck math
+		//to between 0 and 1
 		
 		tempbar.setProgress(result);
 		
@@ -237,7 +237,7 @@ public class Controller {
 				
 				@Override
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					// TODO Auto-generated method stub
+					
 					readFile(path);
 				}
 			};
@@ -310,20 +310,6 @@ public class Controller {
 					timestamplabel.setText(String.valueOf(rows[2]));
 					boardidlabel.setText(String.valueOf(rows[11]));
 					
-					// Check if we read enough data from the line in the csv file
-					// This is to prevent array index out-of-bounds exceptions 
-					//if (rows.length == 12)
-					//{
-						// Grabbing the data from the csv file and storing into variables
-						//String rowTime = new String("Time: " + rows[0]);
-												
-						
-						
-						//String boardID = new String("Board ID: " + rows[9]);
-						
-						
-						
-					//}
 				}
 				
 				catch (ArrayIndexOutOfBoundsException | IOException
